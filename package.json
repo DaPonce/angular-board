@@ -2,12 +2,17 @@
   "name": "angular-board",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
+    "build:prod": "ng build --prod",
+    "build:pub": "ng build --prod --output-path docs --base-href https:/",
+    "e2e": "ng e2e",
+    "http-server": "http-server ./dist/angular-board/ -c-1 -p4271 -a loc",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "ng": "ng",
+    "pub": "npm run build:pub && npm run push",
+    "push": "git add * && git commit -m 'pub' && git push",
+    "start:prod": "npm run build:prod && npm run http-server",
+    "start": "ng serve --aot -o --port 4270",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +25,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
+    "mini.css": "^3.0.1",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
