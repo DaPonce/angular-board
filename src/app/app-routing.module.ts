@@ -13,6 +13,10 @@ const routes: Routes = [
     component: HeroesComponent
   },
   {
+    path: 'contacts',
+    loadChildren: './contacts/contacts.module#ContactsModule'
+  },
+  {
     path: 'about',
     loadChildren: './about/about.module#AboutModule'
   },
