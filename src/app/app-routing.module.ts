@@ -13,6 +13,14 @@ const routes: Routes = [
     component: HeroesComponent
   },
   {
+    path: 'car',
+    loadChildren: './car/car.module#CarModule'
+  },
+  {
+    path: 'converter',
+    loadChildren: './converter/converter.module#ConverterModule'
+  },
+  {
     path: 'contacts',
     loadChildren: './contacts/contacts.module#ContactsModule'
   },
