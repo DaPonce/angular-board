@@ -29,6 +29,14 @@ const routes: Routes = [
     loadChildren: './about/about.module#AboutModule'
   },
   {
+    path: 'rates',
+    loadChildren: './rates/rates.module#RatesModule'
+  },
+  {
+    path: 'notifications',
+    loadChildren: './notifications/notifications.module#NotificationsModule'
+  },
+  {
     path: 'not-found',
     component: NotFoundComponent
   },
