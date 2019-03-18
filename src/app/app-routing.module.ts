@@ -37,6 +37,10 @@ const routes: Routes = [
     loadChildren: './notifications/notifications.module#NotificationsModule'
   },
   {
+    path: 'security',
+    loadChildren: './security/security.module#SecurityModule'
+  },
+  {
     path: 'not-found',
     component: NotFoundComponent
   },
